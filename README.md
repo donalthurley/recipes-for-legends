@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Extra innstructions to support bootstrap NavBar
+
+- Install bootstrap and the supporting packages.
+1. `npm install bootstrap`
+2. `npm install --save @ng-bootstrap/ng-bootstrap`
+3. `npm install --save ngx-bootstrap`
+
+- Add the following link to `src/index.html`
+
+`<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">`
+
+- Update `src/styles.css` and `src/app/header/header.component.html` with the new styles.
+
+
