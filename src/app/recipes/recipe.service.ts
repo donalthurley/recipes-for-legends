@@ -11,25 +11,25 @@ export class RecipeService {
     recipesChanged = new Subject<Recipe[]>();
 
     private recipes: Recipe[] = [
-    new Recipe('Pancakes', 'Pancakes are good for you.',
-     // tslint:disable-next-line:max-line-length
-     '../../assets/pexels-photo-264727.jpeg', // tea-cake-cafe-desserts-162827.jpeg
-
-    [
-        new Ingredient('Flour', 1),
-        new Ingredient('Egg', 1)
-    ]),
-
-     new Recipe('Waffles', 'Waffles are good for you.',
-     // tslint:disable-next-line:max-line-length
-     '../../assets/pexels-photo-227432.jpeg',
-
-    [
-        new Ingredient('Flour', 1),
-        new Ingredient('Milk', 3),
-        new Ingredient('Oil', 2)
-    ])
-  ];
+      new Recipe(
+        'Schnitzel',
+        'A super-tasty Schnitzel!',
+        'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
+        [
+          new Ingredient('Meet', 1),
+          new Ingredient('French Fries', 20)
+        ]
+      ),
+      new Recipe(
+        'Big Fat Burger',
+        'What else you need to say?',
+        'https://www.seriouseats.com/images/2015/06/20150612-vegetarian-burger-recap-04.jpg',
+        [
+          new Ingredient('Buns', 2),
+          new Ingredient('Meat', 20)
+        ]
+      )
+    ];
 
   constructor(private slService: ShoppingListService) {}
 
