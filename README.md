@@ -26,16 +26,33 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Extra innstructions to support bootstrap NavBar
+## Extra instructions to support bootstrap NavBar
+Source these instructions from here to get the NavBar to work for Angular10 see [relevant article](https://www.wrappixel.com/add-bootstrap-to-angular/)
 
 - Install bootstrap and the supporting packages.
-1. `npm install bootstrap`
-2. `npm install --save @ng-bootstrap/ng-bootstrap`
-3. `npm install --save ngx-bootstrap`
+```
+npm install bootstrap
+npm install --save @ng-bootstrap/ng-bootstrap
+npm install --save ngx-bootstrap
+```
+- Configure `angular.json`
 
+```
+"styles": [
+  "src/styles.css",
+  "node_modules/bootstrap/dist/css/bootstrap.min.css"
+],
+"scripts": [
+  "node_modules/jquery/dist/jquery.min.js",
+  "node_modules/bootstrap/dist/js/bootstrap.min.js"
+]
+```
 - Add the following link to `src/index.html`
+```
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+```
 
-`<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">`
+- Add NgbModule to `imports` in `src/app/app.module.ts`
 
 - Update `src/styles.css` and `src/app/header/header.component.html` with the new styles.
 
