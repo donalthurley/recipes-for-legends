@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeService } from './recipes/recipe.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { RecipeService } from './recipes/recipe.service';
     RecipeEditComponent
   ],
   imports: [
-    BrowserModule, NgbModule, AppRoutingModule
+    BrowserModule, NgbModule, AppRoutingModule, FormsModule
   ],
   providers: [ShoppingListService, RecipeService],
   bootstrap: [AppComponent]
