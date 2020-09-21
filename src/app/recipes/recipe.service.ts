@@ -10,26 +10,28 @@ import { Subject } from 'rxjs';
 export class RecipeService {
     recipesChanged = new Subject<Recipe[]>();
 
-    private recipes: Recipe[] = [
-      new Recipe(
-        'Schnitzel',
-        'A super-tasty Schnitzel!',
-        'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
-        [
-          new Ingredient('Meet', 1),
-          new Ingredient('French Fries', 20)
-        ]
-      ),
-      new Recipe(
-        'Big Fat Burger',
-        'What else you need to say?',
-        'https://www.seriouseats.com/images/2015/06/20150612-vegetarian-burger-recap-04.jpg',
-        [
-          new Ingredient('Buns', 2),
-          new Ingredient('Meat', 20)
-        ]
-      )
-    ];
+    // private recipes: Recipe[] = [
+    //   new Recipe(
+    //     'Schnitzel',
+    //     'A super-tasty Schnitzel!',
+    //     'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
+    //     [
+    //       new Ingredient('Meet', 1),
+    //       new Ingredient('French Fries', 20)
+    //     ]
+    //   ),
+    //   new Recipe(
+    //     'Big Fat Burger',
+    //     'What else you need to say?',
+    //     'https://www.seriouseats.com/images/2015/06/20150612-vegetarian-burger-recap-04.jpg',
+    //     [
+    //       new Ingredient('Buns', 2),
+    //       new Ingredient('Meat', 20)
+    //     ]
+    //   )
+    // ];
+
+  private recipes: Recipe[] = [];
 
   constructor(private slService: ShoppingListService) {}
 
